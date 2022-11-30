@@ -4,7 +4,9 @@
   Вообще разве папку со шрифтами не надо было тоже в vendor/fonts/Inter кидать? Или в блоки?.. 
   Как-то немного странно. Ладно, оставлю в руте пока.  
 */
-
+.root {
+  background-color: #2A2C2F;
+}
 
 .page {
   font-family: "Inter", sans-serif;
@@ -38,6 +40,7 @@
 .header__lang-link {
   text-decoration: none;
   color: #FFFFFF;
+  cursor: pointer;
   font-weight: 400;
   font-size: 18px;
   line-height: 20px;
@@ -94,9 +97,9 @@
 }
 /* Временная мера для всех изображений */
 /* TODO УДАЛИТЬ */
-img {
+/* img {
   width: 100%;
-}
+} */
 .lead__caption {
   font-size: 10px;
   line-height: 14px;
@@ -208,21 +211,23 @@ img {
 }
 .photo-grid {
   padding: 0 16px 0; 
-  /* 720 88 24 0, 1024 92 48  */
   display: grid;
   gap: 16px;
 }
 
 .photo-grid__item {
+  width: 100%;
 }
 
 @media screen and (min-width: 768px) {
 
   .photo-grid {
-    padding: 0 24px 0; 
-    /* 720 88 24 0, 1024 92 48  */
-    /* grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(6, 1fr); */
+    padding: 0 24px 0;
+    grid-template-columns: repeat(auto-fit, minmax(352px, 1fr));
+    /* 
+    Для следующих расширений закомментил, вроде как так лучше когда плавно тянеться, и не уверен что те размеры были жестко указаны 
+    НО
+    при расширении*/
   }
 }
 
@@ -231,8 +236,7 @@ img {
   .photo-grid {
     padding: 0 48px 0;
     gap: 14px;
-    /* grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: repeat(4, 1fr); */
+    /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
   }
 }
 
@@ -241,69 +245,166 @@ img {
   .photo-grid {
     padding: 0 48px 0;
     gap: 16px;
-    
-    /* grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: repeat(3, 1fr); */
+    /* grid-template-columns: repeat(auto-fit, minmax(284px, 1fr)); */
   }
 }
 
 .places {
-  padding-top: 64px;
+  /* padding-top: 64px; */
+  padding: 64px 0 66px;
+  display: grid;
+  margin: auto;
+  gap: 50px;
 }
 .place {
+  justify-content: center;
 }
 .place__title {
   font-weight: 900;
-font-size: 32px;
-line-height: 35px;
+  font-size: 32px;
+  line-height: 35px;
+  margin: 0 16px 32px;
 }
-
-/* 720
-font-size: 42px;
-line-height: 46px;
- */
- /* 1024+
- font-size: 72px;
-line-height: 76px;
- */
 .place__website {
+  margin: 0 16px 32px;
+  align-self: end;
 }
 .place__url-heading {
   font-weight: 400;
   font-size: 12px;
   line-height: 12px;
-  /* identical to box height, or 100% */
-
   letter-spacing: 2px;
   color: #AAAAAA;
+  margin-bottom: 12px;
 }
 .place__link {
   font-weight: 400;
   font-size: 18px;
   line-height: 22px;
-  /* identical to box height, or 122% */
-
   text-decoration: underline;
   color: #FFFFFF;
+  cursor: pointer;
 }
 .place__image {
+  width: 100%;
 }
 .place__paragraph {
   font-size: 16px;
-line-height: 163%;
+  line-height: 163%;
+  margin: 0;
 }
- /* 1024+
-  font-size: 18px;
- */
+.place__paragraph-container {
+  margin: 32px 16px 0;
+}
+
+.place__paragraph:not(:first-child) {
+  margin-top: 25px;
+}
+
+ @media screen and (min-width: 768px) {
+  .places {
+    gap: 73px;
+  }
+  .place {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(2, min-content) ;
+    column-gap: 28px;
+    padding: 0 24px;
+  }
+  .place__title {
+    font-size: 42px;
+    line-height: 46px;
+    margin: 0 0 48px;
+  }
+  .place__paragraph-container {
+    margin: 0;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .places {
+    gap: 80px;
+  }
+  .place {
+    column-gap: 32px;
+  }
+  .place__title {
+    font-size: 72px;
+    line-height: 76px;
+    margin: 0 0 48px;
+  }
+  .place__paragraph {
+    font-size: 18px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .place {
+    grid-template-columns: repeat(2, 50%);
+    column-gap: 40px;
+  }
+}
+
 .cover {
+  /* background-image: url(../images/cover-trains.jpg);
+  background-size: cover;
+  min-height: 200px;
+  opacity: 0.8;
+  display: flex;
+  align-items: center; */
+  width: 100%;
 }
 .cover__link {
+  text-decoration: none;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: block;
+  padding: 33px 16px;
 }
+
 .cover__container {
+  background-image: url(../images/cover-trains.jpg);
+  background-size: cover;
+  min-width: 320px;
+  opacity: 0.8;
+  padding-bottom: 50%;
+  width: 100%;
+}
+
+.cover__container:hover {
+  opacity: 0.3;
 }
 .cover__title {
+  font-weight: 900;
+  font-size: 32px;
+  line-height: 35px;
+  text-align: center;
+  padding-top: 33px;
+  margin: 0 auto 16px;
 }
 .cover__subtitle {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+  .cover__title {
+    font-size: 72px;
+    line-height: 76px;
+    margin: 0 auto 32px;
+  }
+  .cover__subtitle {
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+@media screen and (min-width: 1024px) {
+
+}
+@media screen and (min-width: 1280px) {
+
 }
 .footer {
   padding: 64px 16px 24px;
