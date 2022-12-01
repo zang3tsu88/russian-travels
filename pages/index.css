@@ -245,7 +245,8 @@
   .photo-grid {
     padding: 0 48px 0;
     gap: 16px;
-    /* grid-template-columns: repeat(auto-fit, minmax(284px, 1fr)); */
+    grid-template-columns: repeat(auto-fit, minmax(284px, 1fr));
+    /* Раскомментил это ибо при 1280 только 3 картинки в ряду и 4 появляется около 1500 */
   }
 }
 
@@ -327,6 +328,7 @@
   }
   .place {
     column-gap: 32px;
+    padding: 0 48px;
   }
   .place__title {
     font-size: 72px;
@@ -339,73 +341,91 @@
 }
 @media screen and (min-width: 1280px) {
   .place {
-    grid-template-columns: repeat(2, 50%);
+    grid-template-columns: repeat(2, 38%);
     column-gap: 40px;
   }
 }
 
 .cover {
-  /* background-image: url(../images/cover-trains.jpg);
+  background-image: url(../images/cover-trains.jpg);
   background-size: cover;
-  min-height: 200px;
-  opacity: 0.8;
-  display: flex;
-  align-items: center; */
-  width: 100%;
+  background-position: center center;
+  margin: auto;
+  position: relative;
+  /* min-height: 200px;   */
+  min-height: 62.5vw;
 }
+
 .cover__link {
   text-decoration: none;
   color: #FFFFFF;
   cursor: pointer;
-  display: block;
-  padding: 33px 16px;
-}
-
-.cover__container {
-  background-image: url(../images/cover-trains.jpg);
-  background-size: cover;
-  min-width: 320px;
-  opacity: 0.8;
-  padding-bottom: 50%;
+  background-color: rgba(42, 44, 47, 0.3); /* #2A2C2F */
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 200ms;
 }
 
-.cover__container:hover {
-  opacity: 0.3;
+.cover__link:hover {
+  background-color: rgba(42, 44, 47, 0.8); /* #2A2C2F */
+
 }
 .cover__title {
   font-weight: 900;
   font-size: 32px;
   line-height: 35px;
   text-align: center;
-  padding-top: 33px;
-  margin: 0 auto 16px;
+  margin: 0;
+  max-width: 288px;
+
 }
+
 .cover__subtitle {
   font-weight: 400;
   font-size: 14px;
   line-height: 16px;
   text-align: center;
-  margin: 0 auto;
+  margin: 16px 0 0;
+  max-width: 288px;
 }
 
 @media screen and (min-width: 768px) {
+  /* .cover {
+    min-height: 480px;
+} */
   .cover__title {
     font-size: 72px;
     line-height: 76px;
-    margin: 0 auto 32px;
+    margin: 0;
+    max-width: 560px;
   }
+  
   .cover__subtitle {
     font-size: 18px;
     line-height: 22px;
+    margin: 32px 0 0;
+    max-width: 360px;
   }
 }
-@media screen and (min-width: 1024px) {
-
+/* @media screen and (min-width: 1024px) {
+  .cover {
+    min-height: 640px;
+  }
 }
 @media screen and (min-width: 1280px) {
+  .cover {
+    min-height: 740px;
+  }
+} */
 
-}
+
 .footer {
   padding: 64px 16px 24px;
 }
