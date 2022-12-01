@@ -4,6 +4,15 @@ This is a project from a [Yandex Practicum](https://practicum.yandex.ru/) web de
 
 ## Table of contents
 
+- [Overview](#overview)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My Process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Useful resourses](#useful-resouces)
+- [Author](#author)
+
 ## Overview
 
 ### Screenshot
@@ -17,17 +26,19 @@ This is a project from a [Yandex Practicum](https://practicum.yandex.ru/) web de
 
 ## My process
 
-### Built with
+### Built with:
 
 - Semantic HTML5 markup
 - CSS custom properties
 - Flexbox
 - Grid
+- Figma
 
 ### What I learned
 
 Finnaly understood how exactly auto margin works. 
 Practiced grid layout and got a hang of it.
+Started working in Figma.
 
 ### Useful resouces
 
@@ -42,25 +53,3 @@ If you want more help with writing markdown, we'd recommend checking out [The Ma
 ## Author
 
 - Github - [@zang3tsu88](https://github.com/zang3tsu88)
-
-### Обзор
-* Интро
-* Figma
-* Картинки
-
-**Интро**
-
-Здесь будет проект о путешествии по России.
-В Фигме мы разместили макет, в котором видно, как проект должен выглядеть на самых распространённых разрешениях экранов.
-Этот проект сложнее предыдущих, постарайтесь уделить ему больше времени.
-
-**Figma**
-
-* [Ссылка на макет в Figma](https://www.figma.com/file/5S2WSbEFL6awjVWJ0NWL8Q/Sprint-3_-Russia-_-desktop-mobile?node-id=28503%3A0)
-
-**Картинки**
-
-Доставать картинки предстоит из Фигмы. Это расхожая практика, поэтому полезно потренироваться.
-Не забудьте [оптимизировать картинки](https://tinypng.com/), чтобы ваш сайт загружался быстрее.
-
-Удачи!
