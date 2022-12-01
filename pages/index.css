@@ -4,510 +4,58 @@
   Вообще разве папку со шрифтами не надо было тоже в vendor/fonts/Inter кидать? Или в блоки?.. 
   Как-то немного странно. Ладно, оставлю в руте пока.  
 */
-.root {
-  background-color: #2A2C2F;
-}
 
-.page {
-  font-family: "Inter", sans-serif;
-  margin: 0 auto;
-  max-width: 1600px;
-  background-color: #2A2C2F;
-  color: #FFFFFF;
-  box-sizing: border-box;
-}
+/* Roots */
+@import url(../blocks/root/root.css);
+@import url(../blocks/page/page.css);
 
-.header {
-  padding: 16px 16px 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+/* Header */
+@import url(../blocks/header/header.css);
+@import url(../blocks/header/__logo/header__logo.css);
+@import url(../blocks/header/__lang-link-list/header__lang-link-list.css);
+@import url(../blocks/header/__lang-link/header__lang-link.css);
+@import url(../blocks/header/__lang-link/_active/header__lang-link_active.css);
 
-.header__logo {
-  width: 142px;
-  height: 42px;
-}
+/* Lead */
+@import url(../blocks/lead/__title/lead__title.css);
+@import url(../blocks/lead/__subtitle/lead__subtitle.css);
+@import url(../blocks/lead/__image/lead__image.css);
+@import url(../blocks/lead/__caption/lead__caption.css);
 
-.header__lang-link-list {
-  list-style: none;
-  margin: 0;
-  padding: 10px 0 0;
-  display: flex;
-  gap: 18px;
-}
+/* Intro */
+@import url(../blocks/intro/intro.css);
+@import url(../blocks/intro/__title/intro__title.css);
+@import url(../blocks/intro/__text/intro__text.css);
+@import url(../blocks/intro/__list/intro__list.css);
+@import url(../blocks/intro/__list-item/intro__list-item.css);
+@import url(../blocks/intro/__list-span/intro__list-span.css);
 
-.header__lang-link {
-  text-decoration: none;
-  color: #FFFFFF;
-  cursor: pointer;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 20px;
-  transition: opacity 200ms;
-}
+/* Grid Photos */
+@import url(../blocks/photo-grid/photo-grid.css);
+@import url(../blocks/photo-grid/__item/photo-grid__item.css);
 
-.header__lang-link:hover {
-  opacity: 0.8;
-}
+/* Places */
+@import url(../blocks/places/places.css);
 
-.header__lang-link_active{
-  text-decoration: underline;
-}
+/* Place */
+@import url(../blocks/place/place.css);
+@import url(../blocks/place/__title/place__title.css);
+@import url(../blocks/place/__website/place__website.css);
+@import url(../blocks/place/__url-heading/place__url-heading.css);
+@import url(../blocks/place/__link/place__link.css);
+@import url(../blocks/place/__image/place__image.css);
+@import url(../blocks/place/__paragraph/place__paragraph.css);
+@import url(../blocks/place/__paragraph-container/place__paragraph-container.css);
 
-@media screen and (min-width: 768px) {
+/* Cover */
+@import url(../blocks/cover/cover.css);
+@import url(../blocks/cover/__link/cover__link.css);
+@import url(../blocks/cover/__title/cover__title.css);
+@import url(../blocks/cover/__subtitle/cover__subtitle.css);
 
-  .header__lang-link {
-    font-size: 24px;
-    line-height: 28px;
-  }  
-}
-
-@media screen and (min-width: 1024px) {
-  
-  .header {
-    padding: 28px 48px 0;
-  }
-  
-  .header__logo {
-    width: 176px;
-    height: 52px;
-  }
-}
-
-.content {
-}
-.lead {
-}
-.lead__title {
-  font-weight: 900;
-  font-size: 40px;
-  line-height: 44px;
-  text-align: center;
-  margin: 48px auto 16px;
-  max-width: 288px;
-}
-
-.lead__subtitle {
-  font-size: 16px;
-  line-height: 20px;
-  text-align: center;
-  margin: 0 auto 40px;
-  max-width: 288px;
-}
-
-.lead__image {
-  width: 100%;
-  box-sizing: border-box;
-}
-/* Временная мера для всех изображений */
-/* TODO УДАЛИТЬ */
-/* img {
-  width: 100%;
-} */
-.lead__caption {
-  font-size: 10px;
-  line-height: 14px;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  padding-left: 16px;
-}
-
-@media screen and (min-width: 768px) {
-  
-  .lead__title {
-    font-size: 96px;
-    line-height: 100px;
-    margin: 48px auto 32px;
-    max-width: 720px;
-  }
-  
-  .lead__subtitle {
-    font-size: 30px;
-    line-height: 36px;
-    margin: 0 auto 56px;
-    max-width: 640px;
-  }
-  
-    .lead__image {
-      padding: 0 48px;
-    }
-
-    .lead__caption {
-      padding: 0 48px;
-    }
-  }
-  
-  @media screen and (min-width: 1280px) {
-    
-  .lead__title {
-    margin: 56px auto 32px;
-  }
-  
-  .lead__subtitle {
-    margin: 0 auto 64px;
-  }
-  
-  .lead__image {
-    padding: 0 148px;
-  }
-  
-  .lead__caption {
-    padding: 0 148px;
-  }
-}
-
-.intro {
-  padding: 64px 16px;
-}
-
-.intro__title {
-  font-weight: 900;
-  font-size: 32px;
-  line-height: 35px;
-  margin: 0 auto 40px;
-}
-.intro__text {
-  font-size: 16px;
-  line-height: 163%;
-  margin: 0 auto 33px 0;
-}
-
-.intro__list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.intro__list-item {
-  font-weight: 700;
-  font-size: 12px;
-  line-height: 18px;
-}
-.intro__list-span {
-  font-weight: 400;
-}
-
-@media screen and (min-width: 768px) {
-  .intro {
-    padding: 88px 24px;
-  }
-  .intro__title {
-    font-size: 54px;
-    line-height: 58px;
-  }
-  .intro__text {
-    max-width: 720px;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .intro {
-    padding: 92px 48px;
-  }
-  .intro__text {
-    max-width: 690px;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .intro {
-    padding: 92px 148px;
-  }
-
-}
-.photo-grid {
-  padding: 0 16px 0; 
-  display: grid;
-  gap: 16px;
-}
-
-.photo-grid__item {
-  width: 100%;
-}
-
-@media screen and (min-width: 768px) {
-
-  .photo-grid {
-    padding: 0 24px 0;
-    grid-template-columns: repeat(auto-fit, minmax(352px, 1fr));
-    /* 
-    Для следующих расширений закомментил, вроде как так лучше когда плавно тянеться, и не уверен что те размеры были жестко указаны 
-    НО
-    при расширении*/
-  }
-}
-
-@media screen and (min-width: 1024px) {
-
-  .photo-grid {
-    padding: 0 48px 0;
-    gap: 14px;
-    /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
-  }
-}
-
-@media screen and (min-width: 1280px) {
-
-  .photo-grid {
-    padding: 0 48px 0;
-    gap: 16px;
-    grid-template-columns: repeat(auto-fit, minmax(284px, 1fr));
-    /* Раскомментил это ибо при 1280 только 3 картинки в ряду и 4 появляется около 1500 */
-  }
-}
-
-.places {
-  /* padding-top: 64px; */
-  padding: 64px 0 66px;
-  display: grid;
-  margin: auto;
-  gap: 50px;
-}
-.place {
-  justify-content: center;
-}
-.place__title {
-  font-weight: 900;
-  font-size: 32px;
-  line-height: 35px;
-  margin: 0 16px 32px;
-}
-.place__website {
-  margin: 0 16px 32px;
-  align-self: end;
-}
-.place__url-heading {
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 12px;
-  letter-spacing: 2px;
-  color: #AAAAAA;
-  margin-bottom: 12px;
-}
-.place__link {
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 22px;
-  text-decoration: underline;
-  color: #FFFFFF;
-  cursor: pointer;
-  transition: opacity 200ms;
-}
-
-.place__link:hover {
-  opacity: 0.8;
-}
-
-.place__image {
-  width: 100%;
-}
-.place__paragraph {
-  font-size: 16px;
-  line-height: 163%;
-  margin: 0;
-}
-.place__paragraph-container {
-  margin: 32px 16px 0;
-}
-
-.place__paragraph:not(:first-child) {
-  margin-top: 25px;
-}
-
- @media screen and (min-width: 768px) {
-  .places {
-    gap: 73px;
-  }
-  .place {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(2, min-content) ;
-    column-gap: 28px;
-    padding: 0 24px;
-  }
-  .place__title {
-    font-size: 42px;
-    line-height: 46px;
-    margin: 0 0 48px;
-  }
-  .place__paragraph-container {
-    margin: 0;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .places {
-    gap: 80px;
-  }
-  .place {
-    column-gap: 32px;
-    padding: 0 48px;
-  }
-  .place__title {
-    font-size: 72px;
-    line-height: 76px;
-    margin: 0 0 48px;
-  }
-  .place__paragraph {
-    font-size: 18px;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .place {
-    grid-template-columns: repeat(2, 38%);
-    column-gap: 40px;
-  }
-}
-
-.cover {
-  background-image: url(../images/cover-trains.jpg);
-  background-size: cover;
-  background-position: center center;
-  margin: auto;
-  position: relative;
-  /* min-height: 200px;   */
-  min-height: 62.5vw;
-}
-
-.cover__link {
-  text-decoration: none;
-  color: #FFFFFF;
-  cursor: pointer;
-  background-color: rgba(42, 44, 47, 0.3); /* #2A2C2F */
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  transition: background-color 200ms;
-}
-
-.cover__link:hover {
-  background-color: rgba(42, 44, 47, 0.8); /* #2A2C2F */
-
-}
-.cover__title {
-  font-weight: 900;
-  font-size: 32px;
-  line-height: 35px;
-  text-align: center;
-  margin: 0;
-  max-width: 288px;
-
-}
-
-.cover__subtitle {
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 16px;
-  text-align: center;
-  margin: 16px 0 0;
-  max-width: 288px;
-}
-
-@media screen and (min-width: 768px) {
-  /* .cover {
-    min-height: 480px;
-} */
-  .cover__title {
-    font-size: 72px;
-    line-height: 76px;
-    margin: 0;
-    max-width: 560px;
-  }
-  
-  .cover__subtitle {
-    font-size: 18px;
-    line-height: 22px;
-    margin: 32px 0 0;
-    max-width: 360px;
-  }
-}
-/* @media screen and (min-width: 1024px) {
-  .cover {
-    min-height: 640px;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .cover {
-    min-height: 740px;
-  }
-} */
-
-
-.footer {
-  padding: 64px 16px 24px;
-}
-
-.footer__link-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-.footer__link-item {
-  margin-bottom: 32px;
-}
-.footer__link {
-  text-decoration: none;
-  color: #FFFFFF;
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 24px;
-}
-.footer__copyright {
-  margin: 0;
-  margin-top: 48px;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 14px;
-}
-
-@media screen and (min-width: 768px) {
-  .footer {
-    padding: 88px 24px 24px;
-    display: flex;
-    justify-content: space-between;
-  }
-  .footer__link-list {
-    display: flex;
-    align-items: flex-end;
-    gap: 18px;
-  }
-  .footer__link-item {
-    margin: 0;
-  }
-  .footer__link {
-    font-size: 16px;
-    line-height: 18px;
-    transition: opacity 200ms;
-  }
-  .footer__link:hover {
-    opacity: 0.8;
-  }
-  .footer__copyright {
-    font-size: 14px;
-    line-height: 16px;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .footer {
-    padding: 92px 48px 24px;
-  }
-}
-@media screen and (min-width: 1280px) {
-
-}
-
-/* TEMPLATE  
-TODO DELETE*/
-@media screen and (min-width: 768px) {
-
-}
-@media screen and (min-width: 1024px) {
-
-}
-@media screen and (min-width: 1280px) {
-
-}
+/* Footer */
+@import url(../blocks/footer/footer.css);
+@import url(../blocks/footer/__link-list/footer__link-list.css);
+@import url(../blocks/footer/__link-item/footer__link-item.css);
+@import url(../blocks/footer/__link/footer__link.css);
+@import url(../blocks/footer/__copyright/footer__copyright.css);
