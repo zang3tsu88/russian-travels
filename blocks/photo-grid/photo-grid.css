@@ -1,5 +1,5 @@
 .photo-grid {
-  padding: 0 16px 0; 
+  padding: 0 16px 0;
   display: grid;
   gap: 16px;
 }
