@@ -44,6 +44,11 @@
   font-weight: 400;
   font-size: 18px;
   line-height: 20px;
+  transition: opacity 200ms;
+}
+
+.header__lang-link:hover {
+  opacity: 0.8;
 }
 
 .header__lang-link_active{
@@ -285,7 +290,13 @@
   text-decoration: underline;
   color: #FFFFFF;
   cursor: pointer;
+  transition: opacity 200ms;
 }
+
+.place__link:hover {
+  opacity: 0.8;
+}
+
 .place__image {
   width: 100%;
 }
@@ -470,6 +481,10 @@
   .footer__link {
     font-size: 16px;
     line-height: 18px;
+    transition: opacity 200ms;
+  }
+  .footer__link:hover {
+    opacity: 0.8;
   }
   .footer__copyright {
     font-size: 14px;
