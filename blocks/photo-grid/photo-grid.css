@@ -1,7 +1,7 @@
 .photo-grid {
   padding: 0 16px 0;
   display: grid;
-  gap: 16px;
+  gap: 12px;
 }
 
 @media screen and (min-width: 768px) {
@@ -9,10 +9,7 @@
   .photo-grid {
     padding: 0 24px 0;
     grid-template-columns: repeat(auto-fit, minmax(352px, 1fr));
-    /* 
-    Для следующих расширений закомментил, вроде как так лучше когда плавно тянеться, и не уверен что те размеры были жестко указаны 
-    НО
-        при расширении*/
+    gap: 16px;
   }
 }
 
@@ -21,7 +18,7 @@
   .photo-grid {
     padding: 0 48px 0;
     gap: 14px;
-    /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
 }
 
@@ -31,6 +28,5 @@
     padding: 0 48px 0;
     gap: 16px;
     grid-template-columns: repeat(auto-fit, minmax(284px, 1fr));
-    /* Раскомментил это ибо при 1280 только 3 картинки в ряду и 4 появляется около 1500 */
   }
 }

@@ -4,14 +4,19 @@
 
 @media screen and (min-width: 768px) {
   .footer {
-    padding: 88px 24px 24px;
+    padding-top: 88px;
+    padding-left: 24px;
+    padding-right: 24px;
     display: flex;
     justify-content: space-between;
+    align-items: flex-end;
   }
 }
 
 @media screen and (min-width: 1024px) {
   .footer {
-    padding: 92px 48px 24px;
+    padding-top: 92px;
+    padding-left: 48px;
+    padding-right: 48px;
   }
 }

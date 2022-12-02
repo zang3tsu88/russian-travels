@@ -1,9 +1,6 @@
+/* Vendor */
 @import url(../vendor/normalize.css);
 @import url(../vendor/fonts.css);
-/* 
-  Вообще разве папку со шрифтами не надо было тоже в vendor/fonts/Inter кидать? Или в блоки?.. 
-  Как-то немного странно. Ладно, оставлю в руте пока.  
-*/
 
 /* Roots */
 @import url(../blocks/root/root.css);
