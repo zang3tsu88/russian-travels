@@ -2,10 +2,10 @@
   opacity: 0.8;
 }
 
-/* @media screen and (min-width: 1280px) {
+@media screen and (min-width: 1280px) {
   .cover {
     margin: 0 auto;
     max-height: 740px;
     max-width: 1184px;
   }
-} */
+}
