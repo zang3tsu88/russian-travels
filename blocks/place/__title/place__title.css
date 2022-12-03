@@ -10,12 +10,12 @@
 
   .place__title {
     padding-left: 0;
-    font-size: 43px;
+    font-size: 42px;
     line-height: 46px;
   }
 
-  .place__title_max-width_333 {
-    max-width: 333px;
+  .place__title_max-width_325 {
+    max-width: 325px;
   }
 }
 
